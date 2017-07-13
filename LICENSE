@@ -1,0 +1,6 @@
+Jenkins将在启动时作为守护进程启动。 有关详细信息，请参阅/etc/init.d/jenkins。
+创建'jenkins'用户来运行此服务。 如果您通过配置文件将其更改为其他用户，则必须更改/var/log/jenkins/,var/lib/jenkins和/var/cache/jenkins的所有者。
+日志文件将被放置在/var/log/jenkins/jenkins.log中。 如果您正在对Jenkins进行故障排除，请检查此文件。
+/ etc / sysconfig / jenkins将捕获启动的配置参数。
+默认情况下，Jenkins侦听端口8080.使用浏览器访问此端口以开始配置。 请注意，内置防火墙可能需要打开才能从其他计算机访问此端口。 （有关如何永久禁用防火墙的说明，请参阅http://www.cyberciti.biz/faq/disable-linux-firewall-under-centos-rhel-fedora/）
+在/etc/yum.repos.d/jenkins.repo中添加了Jenkins RPM存储库
